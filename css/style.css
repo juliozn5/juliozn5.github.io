@@ -375,9 +375,8 @@ body.open .hamburger .bar:last-child{
         124deg, 
         var(--main-color-1) 60%,
         var(--main-color-2) 40%);
-    margin-top: -550px;
+    margin-top: -590px;
     border-radius: 0 0 80px 80px;
-    left: 19%;
 }
 
 .showcase-image .person{
@@ -1156,6 +1155,8 @@ textarea.form-input{
 /*--------------------------------768px Screens------------------------------------*/
 
 @media(max-width: 768px){
+    
+
     .triangle{
         width: 70px;
     }
@@ -1163,16 +1164,16 @@ textarea.form-input{
         width: 65px;
     }
     .square1{
-        width: 55px;
+        display: none;
     }
     .square2{
-        width: 55px;
+        display: none;
     }
     .square3{
-        width: 55px;
+        display: none;
     }
     .square4{
-        width: 55px;
+        display: none;
     }
     
     .hamburger{
@@ -1282,5 +1283,41 @@ textarea.form-input{
         max-width: 450px;
         margin-top: 0px;
         border-radius: 40px;
+    }
+
+    .showcase-info{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .cta{
+        margin-top: 1rem;
+    }
+
+    .showcase-area .circle {
+        width: 120px;
+    }
+
+    .about .container{
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid{
+        order: 3;
+    }
+
+    .heading br{
+        display: none;
+    }
+
+    .about .text{
+        margin: 1rem 0 1.5rem;
+    }
+    .about-grid{
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 150px 150px;
+        margin: 2.5rem 0 0 0;
+        column-gap: 2rem;
+        row-gap: 80px;
     }
 }
