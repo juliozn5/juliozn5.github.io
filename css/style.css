@@ -1026,3 +1026,49 @@ textarea.form-input{
 .contact-form .form-input{
     margin-bottom: 1.5rem;
 }
+
+/*--------------------------------1000px Screens------------------------------------*/
+@media(max-width: 1000px){
+    .sub-heading{
+        font-size: 0.75rem;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+    .showcase-area .heading{
+        font-size: 2.7rem;
+
+    }
+
+    .text{
+        font-size: 0.84rem;
+        margin: 1.3rem 0;
+    }
+    .btn{
+        padding: 0.8rem 1.6rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        min-width: 100px;
+
+    }
+
+    .btn.btn.secondary-btn{
+        font-size: 0.85rem;
+    }
+
+    .form-input{
+        padding: 0.8rem 1.45rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+
+    .logo{
+        font-size: 1.45rem;
+    }
+
+    header .logo{
+        height: 120px;
+        line-height: 120px;
+    }
+}
