@@ -28,7 +28,7 @@ body.dark{
     --bg-color-1: hsl(var(--hue-1), 21%, 11%);
     --bg-color-2: hsl(var(--hue-1), 23%, 19%);
     --bg-color-3: hsl(var(--hue-1), 23%, 24%);
-    --bg-color-transparent: hsl(var(--hue-1), 23%, 19%, 06);
+    --bg-color-transparent: hsl(var(--hue-1), 23%, 19%, 0.6);
     --heading-color: hsl(var(--hue-1), 100%, 95%);
     --text-color: hsl(var(--hue-1), 14%,51%);
 }
@@ -240,6 +240,45 @@ header.scrolled .logo{
 
 .toggle-btn:hover{
     filter: brightness(97%);
+}
+
+.hamburger{
+    display: none;
+    padding: 1rem 0;
+    height: 12px;
+    width: 25px;
+    box-sizing: content-box;
+    cursor: pointer;
+    position: relative;
+}
+.hamburger .bar{
+    width: 100%;
+    height: 2px;
+    background-color: var(--heading-color);
+    border-radius: 3px;
+    position: absolute;
+}
+
+.hamburger .bar:first-child{
+    top: 1rem;
+    transition: top 0.2s 0.15s, transform 0.3s;
+}
+
+.hamburger .bar:last-child{
+    bottom: 1rem;
+    transition: bottom 0.2s 0.15s, transform 0.3s;
+}
+
+body.open .hamburger .bar:first-child{
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: top 0.2s, transform 0.3s 0.1s;
+}
+
+body.open .hamburger .bar:last-child{
+    bottom: 50%;
+    transform: translateY(50%) rotate(45deg);
+    transition: bottom 0.2s, transform 0.3s 0.1s;
 }
 
 /*------------------------ Showcase Area Styling ----------------- */
@@ -1025,4 +1064,207 @@ textarea.form-input{
 
 .contact-form .form-input{
     margin-bottom: 1.5rem;
+}
+
+/*--------------------------------1000px Screens------------------------------------*/
+@media(max-width: 1000px){
+    .sub-heading{
+        font-size: 0.75rem;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+    .showcase-area .heading{
+        font-size: 2.7rem;
+
+    }
+
+    .text{
+        font-size: 0.84rem;
+        margin: 1.3rem 0;
+    }
+    .btn{
+        padding: 0.8rem 1.6rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        min-width: 100px;
+
+    }
+
+    .btn.btn.secondary-btn{
+        font-size: 0.85rem;
+    }
+
+    .form-input{
+        padding: 0.8rem 1.45rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+
+    .logo{
+        font-size: 1.45rem;
+    }
+
+    header .logo{
+        height: 100px;
+        line-height: 100px;
+    }
+    .nav-link{
+        font-size: 0.7rem;
+    }
+
+    .showcase-area{
+        padding: 100px 0;
+    }
+
+    .showcase-area .container{
+        grid-template-columns: 1fr 400px;
+        height: 450px;
+    }
+
+    .skills-box{
+        padding: 4rem;
+    }
+
+    .sk-progress{
+        transform: scale(0.85);
+    }
+    .services .container{
+        column-gap: 2.5rem;
+    }
+
+    .contact-form{
+        padding: 2.5rem 2rem;
+    }
+
+    .contact-form h3{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact .form-input{
+        margin-bottom: 0.8rem;
+    }
+
+    .sub-box{
+        padding: 3.5rem 2.5rem;
+        column-gap: 2rem;
+    }
+}
+
+/*--------------------------------768px Screens------------------------------------*/
+
+@media(max-width: 768px){
+    .triangle{
+        width: 70px;
+    }
+    .dots{
+        width: 65px;
+    }
+    .square1{
+        width: 55px;
+    }
+    .square2{
+        width: 55px;
+    }
+    .square3{
+        width: 55px;
+    }
+    .square4{
+        width: 55px;
+    }
+    
+    .hamburger{
+        display: block ;
+    }
+    
+
+    .links{
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0 2rem;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .links ul{
+        position: relative;
+        flex-direction: column;
+    }
+
+    header nav {
+        justify-content: space-between;
+    }
+    .nav-link{
+        margin: 1.5rem 0;
+        color: var(--heading-color);
+        font-weight: 500;
+    }
+
+    .toggle-btn{
+        margin: 0;
+    }
+
+    .links ul::after{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 0.5px;
+        background-color: var(--heading-color);
+        opacity: 0;
+        top: -0.5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .overlay{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 6;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    header {
+        height: 505px;
+        max-height: 100px;
+        overflow: hidden;
+    }
+   
+    header.scrolled {
+        height: 485px;
+        max-height: 80px;
+    }
+
+    body.open header {
+        max-height: 505px;
+        background-color: var(--bg-color-2);
+    }
+
+    body.open .overlay{
+        opacity: 1;
+        pointer-events: auto;
+
+    }
+
+    body.open .link yl::after{
+        opacity: 0.7;
+        width: 100%;
+    }
+
+    body.open header.scrolled {
+        max-height: 485px;
+    }
+    
+    body.open .links {
+        opacity: 1;
+    }
 }
