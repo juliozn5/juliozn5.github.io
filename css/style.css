@@ -1267,4 +1267,20 @@ textarea.form-input{
     body.open .links {
         opacity: 1;
     }
+
+    .showcase-area .container{
+        grid-template-columns: 1fr;
+        height: revert;
+        justify-items: center;
+        row-gap: 4rem;
+    }
+
+    .showcase-image{
+        min-height: revert;
+        height: 100vw;
+        max-height: 570px;
+        max-width: 450px;
+        margin-top: 0px;
+        border-radius: 40px;
+    }
 }
