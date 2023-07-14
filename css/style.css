@@ -1320,4 +1320,64 @@ textarea.form-input{
         column-gap: 2rem;
         row-gap: 80px;
     }
+    .about-card{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
+    .about-grid::before{
+        width: 150px;
+        height: 150px;
+        border-width: 10px;
+    }
+
+    .box-desc{
+        grid-template-columns: 1fr;
+        justify-content: flex-start;
+    }
+
+    .skills-wrap{
+        grid-template-columns: repeat(2, 150px);
+        row-gap: 1rem;
+    }
+
+    .sk-title{
+        margin-top: 0;
+    }
+
+    .services .container{
+        grid-template-columns: 1fr;
+    }
+
+    .services .text{
+        margin: 1.5rem 0 0.5rem;
+    }
+
+    .services-grid{
+        margin-top: 3.5rem;
+        column-gap: 1.5rem;
+        row-gap: 3.5rem;
+    }
+
+    .srv-card{
+        padding: 1.8rem 1.7rem;
+        min-height: 260px;
+    }
+    .srv-card h3{
+        font-size: 0.9rem;
+    }
+
+    .srv-card .text{
+        margin: 0.4rem 0 0.8rem;
+    }
+
+    .portfolio-title{
+        padding-bottom: 0;
+    }
+
+    .contact .container {
+        grid-template-columns:  1fr;
+        row-gap: 3rem;
+    }
+
 }
