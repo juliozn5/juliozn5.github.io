@@ -717,13 +717,25 @@ opacity: 0.7;
     font-size: 0.95rem;
 }
 
-.services-grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 4.4rem;
-}
+
+
+@media (max-width: 576px) {
+    .services-grid {
+        position: relative;
+        column-gap: 2rem;
+        row-gap: 4.4rem;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .services-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 4.4rem;
+    }
+  }
 
 .srv-card{
     background-color: var(--bg-color-2);
@@ -1123,7 +1135,7 @@ textarea.form-input{
     }
 
     .skills-box{
-        padding: 4rem;
+        padding: 1rem;
     }
 
     .sk-progress{
